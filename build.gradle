@@ -12,3 +12,7 @@ dependencies {
     compile 'commons-collections:commons-collections:3.2'
     testCompile 'junit:junit:4.11'
 }
+
+war {
+	archiveName "myProject.war"
+}
