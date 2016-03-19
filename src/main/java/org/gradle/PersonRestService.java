@@ -1,0 +1,15 @@
+package org.gradle;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/v1/print")
+public class PersonRestService {
+
+	@RequestMapping(value = "", method = RequestMethod.GET)
+	public String printS() {
+		return"****hello word****";
+	}
+}

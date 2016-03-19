@@ -10,6 +10,7 @@ repositories {
 
 dependencies {
     compile 'commons-collections:commons-collections:3.2'
+    compile 'org.springframework:spring-webmvc:4.2.5.RELEASE'
     testCompile 'junit:junit:4.11'
 }
 

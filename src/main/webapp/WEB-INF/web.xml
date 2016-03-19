@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app>
+	<servlet>
+		<servlet-name>myProject</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myProject</servlet-name>
+		<url-pattern>/api/*</url-pattern>
+	</servlet-mapping>
+</web-app>
