@@ -9,7 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class PersonRestService {
 
 	@RequestMapping(value = "", method = RequestMethod.GET)
-	public String printS() {
-		return"****hello word****";
+	public Person printS() {
+		Person person = new Person();
+		person.setName("小明");
+		person.setAge(4);
+		person.setSex("女");
+		return person;
 	}
+	
 }
