@@ -25,4 +25,6 @@
 		</mvc:message-converters>
 	</mvc:annotation-driven>
 	
+	<import resource="spring-dao.xml"/>
+	
 </beans>

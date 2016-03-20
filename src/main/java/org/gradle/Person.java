@@ -1,7 +1,12 @@
 package org.gradle;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-public class Person {
+import org.springframework.jdbc.core.RowMapper;
+
+
+public class Person implements RowMapper<Person> {
     private String name;
     private int age;
     private String sex;
@@ -40,5 +45,12 @@ public class Person {
 	 */
 	public void setSex(String sex) {
 		this.sex = sex;
+	}
+	public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
+		Person person = new Person();
+		person.setName(rs.getString(1));
+		person.setAge(rs.getInt(2));
+		person.setSex(rs.getString(3));
+		return person;
 	}
 }
