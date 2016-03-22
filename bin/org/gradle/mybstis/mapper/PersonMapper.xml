@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<mapper namespace="org.gradle.PersonMapper">  
+  
+    <resultMap id="personResultMap" type="Person">  
+        <id property="name" column="name"/>  
+        <result property="age" column="age"/>  
+        <result property="sex" column="sex"/>  
+    </resultMap>  
+      
+    <select id="getAllPersons"  resultMap="personResultMap">  
+       SELECT name,age,sex from users 
+    </select>  
+       
+</mapper>  

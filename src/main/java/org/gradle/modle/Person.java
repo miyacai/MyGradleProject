@@ -1,12 +1,13 @@
-package org.gradle;
+package org.gradle.modle;
 
+import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
 
-public class Person implements RowMapper<Person> {
+public class Person implements RowMapper<Person>, Serializable {
     private String name;
     private int age;
     private String sex;
