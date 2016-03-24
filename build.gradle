@@ -23,4 +23,8 @@ dependencies {
 
 war {
 	archiveName "myProject.war"
+	from('.'){
+		include "*.jsp"
+		include "*.css"
+	}
 }
