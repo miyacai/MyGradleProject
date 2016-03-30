@@ -6,7 +6,7 @@
 </head>
 
 <body>
-`<script src="click.js"></script>
+ <script src="click.js"></script>
 	<p>All information about users</p>
 	<button onclick="javascript:toClick()">Click to serach</button>
 
