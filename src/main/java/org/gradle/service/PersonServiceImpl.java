@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 
 @Service("personService")
-public class PersonServiceImpl implements PersonMapper{
+public class PersonServiceImpl {
 
 	@Autowired
 	protected PersonMapper personMapper;
