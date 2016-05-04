@@ -18,7 +18,12 @@ dependencies {
 	compile 'org.springframework:spring-jdbc:4.1.4.RELEASE'
 	compile 'org.mybatis:mybatis:3.2.8'
 	compile 'org.mybatis:mybatis-spring:1.2.2'
-    testCompile 'junit:junit:4.11'
+	compile 'javax.servlet:javax.servlet-api:3.1.0'
+
+	compile 'org.apache.logging.log4j:log4j-api:2.0'
+	compile 'org.apache.logging.log4j:log4j-core:2.0'
+	
+	testCompile 'junit:junit:4.11'
 }
 
 war {
@@ -26,5 +31,12 @@ war {
 	from('.'){
 		include "*.jsp"
 		include "*.css"
+	}
+	
+	webInf {
+		from("./src/main/resources/") {
+			include 'log4j2.xml'
+			into './classes'
+		}
 	}
 }

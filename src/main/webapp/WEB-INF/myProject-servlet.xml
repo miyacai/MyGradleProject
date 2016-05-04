@@ -24,6 +24,10 @@
 				class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean>
 		</mvc:message-converters>
 	</mvc:annotation-driven>
+
+	<mvc:interceptors>
+		<bean class="org.gradle.interceptor.MyInterceptor"></bean>
+	</mvc:interceptors>
 	
 	<import resource="spring-dao.xml"/>
 	
