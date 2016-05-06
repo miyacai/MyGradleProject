@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.ThreadContext;
 import org.gradle.mapper.PersonMapper;
 import org.gradle.modle.Person;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ public class PersonServiceImpl {
 	protected PersonMapper personMapper;
 	
 	public List<Person> getAllPersons() {
+		ThreadContext.put("miya", "cai");
 		LOG.trace("trace message");
 		LOG.debug("debug message");
 		LOG.info("info message");

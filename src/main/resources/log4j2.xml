@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration name = "log4j2-myProject">
+<Configuration name = "log4j2-myProject" packages = "org.gradle">
 	<properties>
 		<property name="LOG_HOME">/Users/micai/Desktop</property>
 		<property name="FILE_NAME">mylog</property>
@@ -14,7 +14,7 @@
 			fileName="${LOG_HOME}/${FILE_NAME}.log"
 			filePattern="${LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME}-%d{yyyy-MM-dd}-%i.log.gz">
 			<PatternLayout
-				pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file:%line] - %msg%n" />
+				pattern="||%X{miya} %d{yyyy-MM-dd HH:mm:ss.SSS}  %level [%thread][%file:%line] - %msg%n" />
 			<Policies>
 				 <TimeBasedTriggeringPolicy interval="1"
                     modulate="true" />
@@ -40,7 +40,7 @@
 			<AppenderRef ref="running-log" />
 		</Logger>
 		<Logger name="MyAccessLog" level="info"
-			additivity="false">
+			additivity="true">
 			<AppenderRef ref="access-log" />
 		</Logger>
 		<Root level="warn">
