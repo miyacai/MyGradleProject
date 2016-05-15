@@ -11,8 +11,8 @@
 		</Console>
 
 		<RollingFile name="running-log"
-			fileName="${LOG_HOME}/${FILE_NAME}.log"
-			filePattern="${LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME}-%d{yyyy-MM-dd}-%i.log.gz">
+			fileName="${sys:catalina.home}/mylogs/${FILE_NAME}.log"
+			filePattern="${sys:catalina.home}/mylogs/$${date:yyyy-MM}/${FILE_NAME}-%d{yyyy-MM-dd}-%i.log.gz">
 			<PatternLayout
 				pattern="||%X{miya} %d{yyyy-MM-dd HH:mm:ss.SSS}  %level [%thread][%file:%line] - %msg%n" />
 			<Policies>

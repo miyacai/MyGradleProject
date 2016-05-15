@@ -31,6 +31,8 @@ war {
 	from('.'){
 		include "*.jsp"
 		include "*.css"
+		include "*.js"
+		include "*.jpeg"
 	}
 	
 	webInf {
