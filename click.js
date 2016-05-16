@@ -1,6 +1,6 @@
 function toClick() {
 			$.ajax({
-				url : "http://localhost:8080/myProject/api/v1/print/mybatis"
+				url : "http://localhost:9090/myProject/api/v1/print/mybatis"
 			}).done(function(data) {
 				var text = "<tr><th>name</th><th>age</th><th>sex</th><tr>";
 				for(var i=0;i<data.length;i++){
