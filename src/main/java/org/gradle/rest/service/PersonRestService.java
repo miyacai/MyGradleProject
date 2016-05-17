@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.gradle.modle.Person;
 import org.gradle.service.PersonServiceImpl;
+import org.gradle.spring.Required;
+import org.gradle.spring.Required.RequiredField;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/v1/print")
+@Required(RequiredField.SCHOOL)
 public class PersonRestService {
 
 	@Autowired

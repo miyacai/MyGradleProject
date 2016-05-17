@@ -24,6 +24,9 @@
 				class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean>
 		</mvc:message-converters>
 	</mvc:annotation-driven>
+	
+	<aop:aspectj-autoproxy />
+	
 
 	<mvc:interceptors>
 		<bean class="org.gradle.interceptor.MyInterceptor"></bean>
