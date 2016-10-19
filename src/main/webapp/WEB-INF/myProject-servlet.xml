@@ -17,8 +17,9 @@
         http://www.springframework.org/schema/cache/spring-cache-4.0.xsd">
 	<!-- 使Spring支持自动检测组件，如注解的Controller -->
 	<context:component-scan base-package="org.gradle" />
+	<bean class="org.gradle.third.patry.extensions.SpringWebSwaggerConfig"/>
 	
-	<mvc:annotation-driven>
+	<mvc:annotation-driven> 
 		<mvc:message-converters>
 			<bean
 				class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean>
